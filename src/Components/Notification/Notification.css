@@ -1,0 +1,50 @@
+
+.notification-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    animation: slideIn 0.4s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .notification-card {
+    background-color: #ffffff;
+    border-left: 5px solid #4caf50; /* Green stripe for a "reminder" feel */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    max-width: 350px;
+    padding: 16px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .notification-card__content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .notification-card__title {
+    margin: 0 0 12px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .notification-card__message {
+    font-size: 14px;
+    color: #555;
+    margin: 4px 0;
+    line-height: 1.4;
+  }
+  
